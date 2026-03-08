@@ -46,6 +46,18 @@ struct Items<T> {
 
 fn print_tracks(
     tracks: vec<&Track>{
+        for track in tracks {
+            println!("{}", track.name);
+            println!("{}",
+            track
+            .album
+            .artists
+            .iter()
+            .map(|artist| artist.name.to_string())
+            .collect::<Vec<String>>())
+        };
+        println("{}", track.external_urls.spotify);
+        println!("--------")
 
     }
 )
